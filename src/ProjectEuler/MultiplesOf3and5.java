@@ -14,6 +14,7 @@ public class MultiplesOf3and5 {
 
 	/**
 	 * @param args
+	 * complexity O(n)
 	 */
 	public static void main(String[] args) {
 		
