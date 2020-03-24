@@ -14,19 +14,19 @@ public class MultiplesOf3and5 {
 
 	/**
 	 * @param args
-	 * complexity O(n)
+	 * complexity O(1)
 	 */
 	public static void main(String[] args) {
 		
 		int num = 1000;
-		int sum =0;
-		for(int i=0;i<num;i++) {
-			if(i%3==0 || i%5==0) {
-				sum+=i;
-			}
-		}
+		int lcm = (num-1)/3;
+		int sum3 = (3*(lcm*(lcm+1)))/2;
+		lcm = (num-1)/5;
+		int sum5 = (5*(lcm*(lcm+1)))/2;
 		
-		System.out.println(sum);
+		lcm = (num-1)/15;
+		int sum15 = (15*(lcm*(lcm+1)))/2;
+		System.out.print(sum3+sum5-sum15);
 
 	}
 
