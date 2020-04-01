@@ -18,14 +18,14 @@ public class MultiplesOf3and5 {
 	 */
 	public static void main(String[] args) {
 		
-		int num = 1000;
-		int lcm = (num-1)/3;
-		int sum3 = (3*(lcm*(lcm+1)))/2;
+		int num = 10000000;
+		long lcm = (num-1)/3;
+		long sum3 = (3*(lcm*(lcm+1)))/2;
 		lcm = (num-1)/5;
-		int sum5 = (5*(lcm*(lcm+1)))/2;
+		long sum5 = (5*(lcm*(lcm+1)))/2;
 		
 		lcm = (num-1)/15;
-		int sum15 = (15*(lcm*(lcm+1)))/2;
+		long sum15 = (15*(lcm*(lcm+1)))/2;
 		System.out.print(sum3+sum5-sum15);
 
 	}
