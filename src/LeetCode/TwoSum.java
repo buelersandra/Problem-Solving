@@ -1,19 +1,19 @@
 package LeetCode;
 
 
-import DataStructure.SingleLinkedList;
+import DataStructure.SinglyLinkedList;
 
 public class TwoSum {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		SingleLinkedList list1 = new SingleLinkedList();
+		SinglyLinkedList list1 = new SinglyLinkedList();
 		list1.add(3);
 		list1.add(4);
 		list1.add(2);
 		
-		SingleLinkedList list2 = new SingleLinkedList();
+		SinglyLinkedList list2 = new SinglyLinkedList();
 		
 		list2.add(4);
 		list2.add(6);
@@ -25,9 +25,9 @@ public class TwoSum {
 
 	}
 	
-	public  SingleLinkedList.Node addTwoNumbers(SingleLinkedList.Node l1, SingleLinkedList.Node l2) {
+	public  SinglyLinkedList.Node addTwoNumbers(SinglyLinkedList.Node l1, SinglyLinkedList.Node l2) {
 		int a=0,b=0,rem=0;
-		SingleLinkedList.Node head = null;
+		SinglyLinkedList.Node head = null;
 				
 		while(l2!=null && l1!=null) {
 			b=l2.value;
@@ -36,7 +36,7 @@ public class TwoSum {
 			l1 = l1.next;
 			
 			rem+=(b+a);
-			SingleLinkedList.Node newNode = new SingleLinkedList().new Node(rem%10);
+			SinglyLinkedList.Node newNode = new SinglyLinkedList().new Node(rem%10);
 			rem=rem/10;
 			newNode.next = head;
 			head = newNode;
@@ -45,9 +45,9 @@ public class TwoSum {
 		}
 		
 		
-		SingleLinkedList.Node newHead = null;
+		SinglyLinkedList.Node newHead = null;
 		while(head!=null) {
-			SingleLinkedList.Node newNode = new SingleLinkedList().new Node(head.value);
+			SinglyLinkedList.Node newNode = new SinglyLinkedList().new Node(head.value);
 			newNode.next = newHead;
 			newHead = newNode;
 			head=head.next;
