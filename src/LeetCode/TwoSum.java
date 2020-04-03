@@ -2,6 +2,7 @@ package LeetCode;
 
 
 import DataStructure.SinglyLinkedList;
+import DataStructure.SinglyLinkedList.Node;
 
 public class TwoSum {
 
@@ -19,8 +20,10 @@ public class TwoSum {
 		list2.add(6);
 		list2.add(5);
 		
+		Node newHead = new TwoSum().addTwoNumbers(list1.head, list2.head);
+		list1.addToTail(newHead, list1.new Node(20));
 		
-		list1.traverse(new TwoSum().addTwoNumbers(list1.head, list2.head));
+		list1.traverse(newHead);
 		
 
 	}
@@ -53,6 +56,8 @@ public class TwoSum {
 			head=head.next;
 			
 		}
+		
+		
 		
 		return newHead;
 	        

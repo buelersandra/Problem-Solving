@@ -30,5 +30,17 @@ public class SinglyLinkedList {
 		}
 		
 	}
+	
 
+	public void addToTail(Node head,Node newNode) {
+		Node beforeTail = null;
+		while(head!=null) {
+			beforeTail = head;
+			head = head.next;
+			
+		}
+		
+		 beforeTail.next = newNode;
+		
+	}
 }
