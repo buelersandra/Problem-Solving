@@ -110,7 +110,25 @@ public class InsertNodeAtLinkedListTail {
 
 	    }
 
+	   static void reversePrint(SinglyLinkedListNode head) {
+	        SinglyLinkedListNode newHead = null;
 
+	        while(head!=null){
+	            SinglyLinkedListNode newNode = new InsertNodeAtLinkedListTail(). new SinglyLinkedListNode(head.data);
+	            newNode.next = newHead;
+	            newHead = newNode;
+	            head = head.next;
+
+	        }
+
+	        while(newHead!=null){
+	            System.out.println(newHead.data);
+	            newHead = newHead.next;
+	            
+
+	        }
+
+	    }
 
 
 }
