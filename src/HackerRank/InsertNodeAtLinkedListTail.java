@@ -42,5 +42,45 @@ public class InsertNodeAtLinkedListTail {
 
 
     }
+	
+	static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
+
+        SinglyLinkedListNode newNode = new InsertNodeAtLinkedListTail(). new SinglyLinkedListNode(data);
+        newNode.next = llist;
+        llist = newNode;
+
+        return llist;
+
+
+    }
+	
+	   static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
+		   SinglyLinkedListNode newNode =  new InsertNodeAtLinkedListTail().new SinglyLinkedListNode(data);
+		   SinglyLinkedListNode backUpHead = head;
+		   SinglyLinkedListNode insertNode = null;
+		   SinglyLinkedListNode afterNode = null;
+
+		   int count =1;
+		   while(backUpHead!=null){
+
+		       if(position==count){
+		   insertNode=backUpHead;
+		   afterNode = backUpHead.next;
+		       }
+
+		       count++;
+		       backUpHead = backUpHead.next;
+
+		   }
+
+		   insertNode.next = newNode;
+		   newNode.next=afterNode;
+
+		   return head;
+
+
+
+		       }
+
 
 }
