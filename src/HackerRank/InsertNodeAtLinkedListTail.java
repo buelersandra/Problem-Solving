@@ -12,9 +12,13 @@ public class InsertNodeAtLinkedListTail {
 	      }
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-	
+		SinglyLinkedListNode newNode = new InsertNodeAtLinkedListTail().new SinglyLinkedListNode(20); 
+		
+		SinglyLinkedListNode copiedNode = newNode;
+		copiedNode.data = 21;
+		
+		System.out.println(newNode.data);
 
 	}
 	
@@ -81,6 +85,32 @@ public class InsertNodeAtLinkedListTail {
 
 
 		       }
+	   
+	   static SinglyLinkedListNode removeDuplicates(SinglyLinkedListNode head) {
+	        SinglyLinkedListNode backupHead = head;
+	        SinglyLinkedListNode previousNode = null;
+
+	        
+
+
+	        while(backupHead!=null){
+	            if(previousNode!=null ){
+	                System.out.print("previousNode :"+previousNode.data+", backupHead :"                            +backupHead.data +"\n");
+	                if(previousNode.data == backupHead.data){
+	                    previousNode.next = backupHead.next;
+	                    backupHead=previousNode;
+	                }
+	            }
+	            
+	            previousNode = backupHead;
+	            backupHead = backupHead.next;
+	        }
+
+	        return head;
+
+	    }
+
+
 
 
 }
