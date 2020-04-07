@@ -129,6 +129,31 @@ public class InsertNodeAtLinkedListTail {
 	        }
 
 	    }
+	   
+	   static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
+	        SinglyLinkedListNode backup = head;
+	        SinglyLinkedListNode previousNode = null;
+
+	        int count = 0;
+	        while(backup!=null){
+	            
+	            if(position == count){
+	                if(previousNode == null){
+	                    head = head.next;
+	                    backup = head;
+	                }else{
+	                    previousNode.next = backup.next;
+	                }
+	            }
+	            previousNode = backup;
+	            backup = backup.next;
+	            count++;
+	        }
+
+	        return head;
+
+
+	    }
 
 
 }
