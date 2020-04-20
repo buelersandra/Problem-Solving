@@ -1,6 +1,6 @@
 package HackerRank;
 
-public class InsertNodeAtLinkedListTail {
+public class LinkedListProblems {
 	
 	class SinglyLinkedListNode {
 	        private int data;
@@ -13,7 +13,7 @@ public class InsertNodeAtLinkedListTail {
 
 	public static void main(String[] args) {
 		
-		SinglyLinkedListNode newNode = new InsertNodeAtLinkedListTail().new SinglyLinkedListNode(20); 
+		SinglyLinkedListNode newNode = new LinkedListProblems().new SinglyLinkedListNode(20); 
 		
 		SinglyLinkedListNode copiedNode = newNode;
 		copiedNode.data = 21;
@@ -23,7 +23,7 @@ public class InsertNodeAtLinkedListTail {
 	}
 	
 	static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data) {
-		SinglyLinkedListNode newNode = new InsertNodeAtLinkedListTail().new SinglyLinkedListNode(data);
+		SinglyLinkedListNode newNode = new LinkedListProblems().new SinglyLinkedListNode(data);
 		
 		
 		SinglyLinkedListNode lastToNullNode = null;
@@ -49,7 +49,7 @@ public class InsertNodeAtLinkedListTail {
 	
 	static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
 
-        SinglyLinkedListNode newNode = new InsertNodeAtLinkedListTail(). new SinglyLinkedListNode(data);
+        SinglyLinkedListNode newNode = new LinkedListProblems(). new SinglyLinkedListNode(data);
         newNode.next = llist;
         llist = newNode;
 
@@ -59,7 +59,7 @@ public class InsertNodeAtLinkedListTail {
     }
 	
 	   static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
-		   SinglyLinkedListNode newNode =  new InsertNodeAtLinkedListTail().new SinglyLinkedListNode(data);
+		   SinglyLinkedListNode newNode =  new LinkedListProblems().new SinglyLinkedListNode(data);
 		   SinglyLinkedListNode backUpHead = head;
 		   SinglyLinkedListNode insertNode = null;
 		   SinglyLinkedListNode afterNode = null;
@@ -114,7 +114,7 @@ public class InsertNodeAtLinkedListTail {
 	        SinglyLinkedListNode newHead = null;
 
 	        while(head!=null){
-	            SinglyLinkedListNode newNode = new InsertNodeAtLinkedListTail(). new SinglyLinkedListNode(head.data);
+	            SinglyLinkedListNode newNode = new LinkedListProblems(). new SinglyLinkedListNode(head.data);
 	            newNode.next = newHead;
 	            newHead = newNode;
 	            head = head.next;
