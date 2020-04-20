@@ -8,42 +8,28 @@ public class ArrayProblems {
 
 	public static void main(String[] args) {
 		
-		List<List<Integer>> sList = new ArrayList<>();
-		List<Integer> sQ = new ArrayList<>();
-		sQ.add(1);
-		sQ.add(345255357);
-		sQ.add(205970905);
-		sList.add(sQ);
-		sQ = new ArrayList<>();
-		sQ.add(1);
-		sQ.add(980306253);
-		sQ.add(305632965);
-		sList.add(sQ);
-		sQ = new ArrayList<>();
-		sQ.add(2);
-		sQ.add(736380701);
-		sQ.add(402184046);
-		sList.add(sQ);
-//		sQ = new ArrayList<>();
-//		sQ.add(2);
-//		sQ.add(1);
-//		sQ.add(0);
-//		sList.add(sQ);
-//		sQ = new ArrayList<>();
-//		sQ.add(2);
-//		sQ.add(1);
-//		sQ.add(1);
-//		sList.add(sQ);
-		
-		
-		
-		dynamicArray(2, sList);
-		
+		int[] num = {1,2,3,4,5};
+		rotateArr(num, 4);
 		
 
 	}
 	
-	
+	static void rotateArr(int[] arr,int count) {
+		int[] list = new int[arr.length];
+			for(int i=0;i<arr.length;i++) {
+				if(i-count<0) {
+					list[(i+arr.length-count)%arr.length]=arr[i];
+				}else {
+					list[(i+arr.length-count)%arr.length]=arr[i];
+				}
+				
+			}	
+			for (int i : list) {
+				System.out.print(i+" ");
+			}
+		
+		}
+
 	
 	public static List<Integer> dynamicArray(int n, List<List<Integer>> queries) {
 		ArrayList<ArrayList<Integer>> sList = new ArrayList<ArrayList<Integer>>();
