@@ -1,32 +1,67 @@
 package HackerRank;
 
-import java.time.Year;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public class ArrayProblems {
 
 	public static void main(String[] args) {
 		
-		int[] num = {1,2,3,4,5};
-		rotateArr(num, 4);
-		
+		String[] strings = {"aba","baba","aba","xzxb"};
+		String[] queries = {"aba","xzxb","ab"};
+		matchingStrings(strings, queries);
 
 	}
 	
+	
+	static int[] matchingStrings(String[] strings, String[] queries) {
+	
+		
+		int[] result = new int[queries.length];
+		HashMap<String, Integer> map = new LinkedHashMap<>();
+		
+		
+		for(int i=0;i<queries.length;i++) {
+			map.put(queries[i], 0);
+		}
+		
+		
+		for(int i =0;i<strings.length;i++) {
+			if(map.containsKey(strings[i])) {
+				map.put(strings[i], map.get(strings[i])+1); 
+			}
+
+		}
+		int count = 0;
+		for (int i : map.values()) {
+			result[count]=i;
+			System.out.println(i);
+			count++;
+		}
+		
+		System.out.println(Arrays.toString(result) );
+		return result;
+
+
+    }
+
+	
 	static void rotateArr(int[] arr,int count) {
+//		int[] num = {1,2,3,4,5};
+//		rotateArr(num, 4);
 		int[] list = new int[arr.length];
 			for(int i=0;i<arr.length;i++) {
-				if(i-count<0) {
-					list[(i+arr.length-count)%arr.length]=arr[i];
-				}else {
-					list[(i+arr.length-count)%arr.length]=arr[i];
-				}
+				
+				list[(i-count+arr.length)%arr.length]=arr[i];
 				
 			}	
 			for (int i : list) {
 				System.out.print(i+" ");
 			}
+			System.out.println();
 		
 		}
 
