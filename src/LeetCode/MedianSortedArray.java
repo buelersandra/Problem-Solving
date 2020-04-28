@@ -6,9 +6,7 @@ public class MedianSortedArray {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] nums1 = {1,2};
-		int[] nums2 = {3,4};
-		findMedianSortedArrays(nums1, nums2);
+		
 		
 
 	}
@@ -19,7 +17,9 @@ public class MedianSortedArray {
 	 *  the middle number for oddlist and sumOfMiddle/2 for even list
 	**/
 	 public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
-	        
+//		 int[] nums1 = {1,2};
+//			int[] nums2 = {3,4};
+//			findMedianSortedArrays(nums1, nums2);
 	         
 	         int[] newArr = new int[nums1.length+nums2.length];
 	        int total = 0;

@@ -10,11 +10,61 @@ public class ArrayProblems {
 
 	public static void main(String[] args) {
 		
-		String[] strings = {"aba","baba","aba","xzxb"};
-		String[] queries = {"aba","xzxb","ab"};
-		matchingStrings(strings, queries);
-
 	}
+	
+	//O(n+m) PREFIX - SUM ALGORITHM
+	 static long arrayManipulation(int n, int[][] queries) {
+		 
+//		 int[][] queries = {
+//					{1 ,2, 100},
+//					{2 ,5, 100},
+//					{3 ,4, 100}};
+//			
+//			arrayManipulation(5, queries);
+
+	        long[] set = new long[n+1];
+	        int min=0,max = 0; 
+	        long k=0,resultMax=0,x=0;
+
+	        for(int i=0;i<queries.length;i++){
+	            min = queries[i][0];
+	            max = queries[i][1];
+	            k = queries[i][2];
+
+	            set[min] = set[min]+k;
+	            if((max+1)<=n) 
+	                set[max+1]-=k;  
+	        }
+
+	        for(int i=1;i<=n;i++)
+	        {
+	            x=x+set[i];
+	           resultMax=Math.max(x, resultMax);
+
+	        }
+
+
+	        //O(n*m)
+	        // for(int i=0;i<queries.length;i++){
+	        //     min = queries[i][0]-1;
+	        //     max = queries[i][1]-1;
+	        //     k = queries[i][2];
+
+
+	        //     resultMin = min;
+	        //     resultMax = max;
+	            
+	        //     for(int j=min;j<=max;j++){
+	        //         set[j] = set[j]+k;
+	        //         //System.out.print(set[j]+",");
+	        //         resultMax = Math.max(resultMax,set[j]);
+	        //     }
+	        //     //System.out.println();
+	        // }
+	        System.out.println(resultMax);
+	        return resultMax;
+
+	    }
 	
 	
 	static int[] matchingStrings(String[] strings, String[] queries) {
