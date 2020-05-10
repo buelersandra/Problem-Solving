@@ -9,8 +9,60 @@ import java.util.List;
 public class ArrayProblems {
 
 	public static void main(String[] args) {
-		
+		differenceArray();
 	}
+	
+	
+	static void differenceArray() {
+		int[] initial = {10,5,20,40};
+		//difference array
+		int[] diff = new int[initial.length+1];
+		
+		 int n = initial.length; 
+		  
+		 diff[0] = initial[0]; 
+		 diff[n] = 0; 
+	        for (int i = 1; i < n; i++) 
+	        	diff[i] = initial[i] - initial[i - 1]; 
+	        
+	        
+		diff[0] = diff[0]+10;
+		diff[1]= diff[1+1]+10;
+		
+		for (int i=0;i<initial.length;i++) {
+			if(i==0) {
+				initial[0]=diff[0];
+				
+			}else {
+				initial[i] = diff[i]-initial[i-1];
+			}
+			System.out.print(initial[i]+",");
+		}
+		
+		System.out.println();
+		
+		//update 0,1,10  O(n*m)
+		for(int min =0;min<=1;min++) {
+			initial[0] = initial[0]+10;
+		}
+		
+		for (int i : initial) {
+			System.out.print(i);
+		}
+	}
+	
+	// Creates a diff array D[] for A[] and returns 
+    // it after filling initial values. 
+    static void initializeDiffArray(int A[], int D[]) 
+    { 
+          
+        int n = A.length; 
+  
+        D[0] = A[0]; 
+        D[n] = 0; 
+        for (int i = 1; i < n; i++) 
+            D[i] = A[i] - A[i - 1]; 
+    } 
 	
 	//O(n+m) PREFIX - SUM ALGORITHM
 	 static long arrayManipulation(int n, int[][] queries) {
