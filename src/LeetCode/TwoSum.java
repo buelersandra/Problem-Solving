@@ -17,29 +17,7 @@ public class TwoSum {
 	
 	public static int[] twoSum(int[] nums, int target) {
 		int[] result = new int[2];
-		//int first,second = 0;
-		//result time limit exceeded
-//		  int i=0,j = 0, sum = 0;
-//			//Arrays.sort(nums);
-//			
-//			while(i<nums.length-1 ) {
-//				j++;
-//				
-//				System.out.println(String.format("i is %d j is %d", i,j));
-//				sum = nums[i] + nums[j];
-//				if(sum == target) {
-//					result[0]=i;
-//					result[1]=j;
-//	                return result;
-//				}
-//				
-//				if(sum == target&&sum>target) {
-//					i++;j=i;
-//				}else if(j==nums.length-1) {
-//					i++;j=i;
-//				}	
-//				
-//			}
+
 		
 		//best answer
 		for(int i=0;i<nums.length;i++) {
