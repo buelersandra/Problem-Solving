@@ -5,7 +5,10 @@ package LeetCode;
 
 /**
  * @author beulahana
- *
+ * Question 9 : https://leetcode.com/problems/palindrome-number/
+ * Steps 
+ * - reverse number
+ * - 
  */
 public class PalindromeNumber {
 
@@ -17,6 +20,13 @@ public class PalindromeNumber {
 		System.out.println(isPalindrome(10));
 
 	}
+	
+	
+	/*
+	 * 
+	 * Reverse integer
+	 * Compare with original
+	 */
 	
 	public static boolean isPalindrome(int x) {
 		
